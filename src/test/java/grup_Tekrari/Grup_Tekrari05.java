@@ -4,7 +4,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class grup_Tekrari05 {
+public class Grup_Tekrari05 {
     public static void main(String[] args) {
 
         // maximize iken pencere konumunu ve pencere olcusunu yazdiriniz
