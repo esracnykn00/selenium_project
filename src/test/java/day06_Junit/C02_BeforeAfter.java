@@ -51,6 +51,7 @@ public class C02_BeforeAfter {
     /*
     Bir classda 4 tane test methodu 1 tane before 1 tane after methodu varsa bu classta kac method calismstir?
 
+     3*4=12
      */
 
 
