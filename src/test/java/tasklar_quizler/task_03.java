@@ -1,11 +1,16 @@
 package tasklar_quizler;
 
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
+import org.checkerframework.checker.units.qual.A;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import utilities.TestBase;
+
+import java.util.List;
 
 public class task_03 extends TestBase {
 
@@ -51,6 +56,24 @@ public class task_03 extends TestBase {
 
         //-Url'in https://elementalselenium.com/ olduğunu doğrulayınız
         Assert.assertTrue(driver.getCurrentUrl().contains("https://elementalselenium.com/"));
+
+        //-Yukarıdaki text'in altındaki email bölümüne email'inizi yazınız
+        WebElement mail = driver.findElement(By.xpath("//*[@id='email']"));
+        mail.sendKeys("ronen.exodus@feerock.com",Keys.TAB);
+
+        //-Language dropdown menuden java seçiniz
+        WebElement language = driver.findElement(By.className("dropdown-language"));
+        Select select = new Select(language);
+        select.selectByVisibleText("Java");
+
+        //-Join the mailing list buttonuna tıklayınız
+        driver.findElement(By.xpath("(//input)[2]")).click();
+
+        //-Sayfada Thank you! yazısının çıktığını doğrulayınız
+        String actuel = driver.findElement(By.xpath("//h1")).getText();
+        Assert.assertTrue(actuel.contains("Thank you!"));
+
+
 
 
 

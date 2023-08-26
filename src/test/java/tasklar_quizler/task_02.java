@@ -2,6 +2,7 @@ package tasklar_quizler;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import utilities.TestBase;
@@ -31,18 +32,25 @@ public class task_02 extends TestBase {
 
         //-Dropdown menuden sırasıyla ilk 5 başlığı (Arts&Crafts ile başlayıp Books'a kadar Books dahil) seçip
         //başlık altındakileri aratalım. Her aramada sayfa başlığını yazdıralım
-        List<WebElement> listedekiler = select.getOptions();
-
-        for (int i=1; i<6; i++){
-            listedekiler.get(i).click();
-            System.out.println(i + ".Title : " + driver.getTitle());
-            driver.navigate().back();
+        for (int i = 1; i <6 ; i++) {
+            WebElement ddm1 = driver.findElement(By.xpath("//select[@aria-describedby='searchDropdownDescription']"));
+            Select options = new Select(ddm1);
+            List<WebElement> dropdownMenu = options.getOptions();
+            dropdownMenu.get(i).click();
+            bekle(2);
+            driver.findElement(By.xpath("//*[@id='twotabsearchtextbox']")).sendKeys(Keys.ENTER);
+            System.out.println(i+ " . Menu Başlığı = " + driver.getTitle());
         }
 
 
-
-
+    }
 
 
     }
-}
+
+
+
+
+
+
+
