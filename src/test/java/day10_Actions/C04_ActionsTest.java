@@ -17,6 +17,7 @@ public class C04_ActionsTest extends TestBase {
         /*
         iframe çıktığı için driver'i iframe'e geçirmem gerekir
          */
+        //driver.switchTo().iframe(0); derdik ama testbase de method olusturdum
         frameIndex(0);//-->TestBase'de method ile iframe'e geçiş yaptık
         bekle(2);
         WebElement drag = driver.findElement(By.xpath("//*[@id='draggable']"));
@@ -39,7 +40,7 @@ public class C04_ActionsTest extends TestBase {
         WebElement drop = driver.findElement(By.xpath("//*[@id='droppable']"));
         Actions actions = new Actions(driver);
         actions.clickAndHold(drag).//-->Drag webelementini tut ve bekle
-                moveToElement(drop).//-->Drag webelementini tutup drop webelementinin üzerine götürür
+                moveToElement(drop).//-->Drag webelementini tutup drop webelementinin üzerine götürür cunku onu locate ediyoruz
                 release().//-->Basılı tuttuğumuz webelementi serbest bırakır
                 perform();//-->Action'ı işleme aldık
     }
