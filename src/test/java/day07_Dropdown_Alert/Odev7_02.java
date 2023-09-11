@@ -25,6 +25,8 @@ public class Odev7_02 extends TestBase {
     11.“Selected currency” butonunu secin
     12.“Calculate Costs” butonuna basin sonra “purchase” butonuna basin
      “Foreign currency cash was successfully purchased.” yazisinin ciktigini kontrol edin
+
+
      */
 
 
