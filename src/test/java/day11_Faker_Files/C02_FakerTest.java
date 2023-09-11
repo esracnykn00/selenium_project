@@ -34,6 +34,7 @@ public class C02_FakerTest extends TestBase {
         bekle(2);
         firstName.sendKeys(Keys.TAB,Keys.TAB,Keys.TAB,fakeEmail,Keys.TAB,faker.internet().password(),Keys.TAB,
                 Keys.TAB,"25",Keys.TAB,"May",Keys.TAB,"2007",Keys.TAB,Keys.TAB,Keys.ARROW_RIGHT,Keys.ENTER);
+        //NOT:Keys.ARROW_RIGHT --> space anlamina gelir ve secim yaparken kullaniriz.
 
         //Isaretlediginiz cinsiyetin secili, diger cinsiyet kutusunun secili olmadigini test edin.
         Assert.assertTrue(driver.findElement(By.xpath("//input[@value='2']")).isSelected());

@@ -19,7 +19,7 @@ public class C01_UploadFile extends TestBase {
         //selenium windows pencerelerine müdehale edemez
 
         //Yuklemek istediginiz dosyayi secelim.
-        //"C:\Users\Lenovo\OneDrive\Masaüstü\B171.txt" --> Yüklemek istediğimiz dosyanın yolu (hocaninki)
+        //"C:\Users\Administrator\Desktop\B171.txt" --> Yüklemek istediğimiz dosyanın yolu
         String dosyaYolu = "C:\\Users\\Administrator\\Desktop\\B171.txt";
         dosyaSec.sendKeys(dosyaYolu);
         bekle(2);
@@ -43,7 +43,7 @@ public class C01_UploadFile extends TestBase {
         driver.findElement(By.xpath("//*[.='Select PDF files']")).click();
 
         // Dosya yüklemek için Robot sınıfını kullan
-        String dosyaYolu = "C:\\Users\\Lenovo\\OneDrive\\Masaüstü\\testng.pdf";
+        String dosyaYolu = "C:\\Users\\Administrator\\Desktop\\B171.txt";
         bekle(3);
         uploadFilePath(dosyaYolu);
     }

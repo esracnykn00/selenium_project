@@ -3,6 +3,7 @@ package day11_Faker_Files;
 import org.junit.Assert;
 import org.junit.Test;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class C03_FilesExists {
@@ -19,8 +20,8 @@ public class C03_FilesExists {
             dosya varsa testim passed yoksa failed olur
          */
         //MasaÜstünde bir dosya oluşturalım
-        //"C:\Users\Lenovo\OneDrive\Masaüstü\B171.txt"
-        String dosyaYolu = "C:\\Users\\Lenovo\\OneDrive\\Masaüstü\\B171.txt";
+        //""C:\Users\Administrator\Desktop\B171.txt""
+        String dosyaYolu = "C:\\Users\\Administrator\\Desktop\\B171.txt";
 
         //Ve bu dosyanın varlığını doğrulayalım
         System.out.println(Files.exists(Paths.get(dosyaYolu)));
@@ -38,11 +39,11 @@ public class C03_FilesExists {
          */
         //Test01 methodundaki gibi dosyanın yolunu doğrulayalım
 
-        //"C:\Users\Lenovo                \OneDrive\Masaüstü\B171.txt"
+        //"C:\Users\Administrator                Desktop\B171.txt"
 
         System.out.println(System.getProperty("user.home"));
-        String farkliYol = System.getProperty("user.home");//-->Herkeste farklı olan yol-->C:\Users\Lenovo
-        String ortakYol = "/OneDrive/Masaüstü/B171.txt";//-->Server'daki dosyanın yolu
+        String farkliYol = System.getProperty("user.home");//-->Herkeste farklı olan yol-->C:\Users\Administrator
+        String ortakYol = "\\Desktop\\B171.txt\"";//-->Server'daki dosyanın yolu
 
         String dosyaYolu = farkliYol+ortakYol;//-->Bu şekilde dosyanın yolunu aldık
         System.out.println(Files.exists(Paths.get(dosyaYolu)));

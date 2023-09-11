@@ -12,7 +12,7 @@ public class C04_FileDownload extends TestBase {
     @Test
     public void test01() {
         String farkliYol = System.getProperty("user.home");
-        String ortakYol = "/Downloads/b10 all test cases, code (3).docx";
+        String ortakYol = "\\Downloads\\b10 all test cases, code (3).docx";
         String dosyaYolu = farkliYol+ortakYol;
         try {
             Files.delete(Paths.get(dosyaYolu));
@@ -28,12 +28,11 @@ public class C04_FileDownload extends TestBase {
 
         //Dosyanın başarıyla indirilip indirilmediğini test edelim
 
-        //"C:\Users\Lenovo       \Downloads\b10 all test cases, code (3).docx"
+        //"C:\Users\Administrator    \Downloads\b10 all test cases, code (3).docx"
         String farkliAnaYol = System.getProperty("user.home");
-        String ortakYoll = "/Downloads/b10 all test cases, code (3).docx";
+        String ortakYoll = "\\Downloads\\b10 all test cases, code (3).docx";
         String path = farkliAnaYol+ortakYoll;
         System.out.println(Files.exists(Paths.get(path)));
         Assert.assertTrue(Files.exists(Paths.get(path)));
-
     }
 }

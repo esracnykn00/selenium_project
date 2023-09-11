@@ -50,7 +50,7 @@ public class C02_ExplicitWait extends TestBase {
 
         Assert.assertEquals("Hello World!",helloWorldWE.getText());
         /*
-        hocam özetle explicit wait yarım saniye aralıklarla kontrol ettiği için ve çalışır çalışmaz
+         özetle explicit wait yarım saniye aralıklarla kontrol ettiği için ve çalışır çalışmaz
         alt satıra geçtiği için dinamik kod oluyor Thread.sleep yerine
          */
     }

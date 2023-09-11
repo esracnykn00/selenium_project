@@ -20,7 +20,7 @@ public class C05_ScreenShot extends TestBase {
         1-TakeScreenShot arayüsünden bir obje oluşturup driver'a eşitleriz
         Farklı arayüzler olduğu için casting yaparız.
         2-FileUtils class'ından copyFile() method'u içe parametre olarak
-        oluşturmuş olduğumuz obje ile getScreenShotAs() methodunu kullanır getScreenshot() methoduna
+        oluşturmuş olduğumuz obje ile getScreenShotAs() methodunu kullanır getScreenShotAs() methoduna
         parametre olarak OutputType.FILE ekleriz ve bunu yeni bir dosyaya kaydetmesi için
         new File() diyerek resmi kaydedeceğimiz dosyanın yolunu belirtiriz
  */
